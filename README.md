@@ -7,7 +7,7 @@
 
 3. 初次运行当前本地容器 `docker run -p 80:8080 muyu-demo-docker-container`
 
-    > docker run -p 当前主机端口:容器启动端口 容器名
+    > docker run -p 当前主机端口:容器启动端口 容器名
 
 4. 关闭容器 `docker container stop <当前运行容器的ID>`
 
