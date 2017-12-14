@@ -1,37 +1,18 @@
-# java+mongodb+redis环境搭建
+# 构建一个nginx容器，进行静态站的发布
 
-1. 镜像：
+1. 创建Dockerfile文件
+2. 编译容器 `docker build -t muyu-demo-docker-container .`
 
-  > muyus/muyu-example-docker-java
+    > docker build -t 容器名称 编译文件路径
 
-  > mongo:3.6
+3. 初次运行当前本地容器 `docker run -p 80:8080 muyu-demo-docker-container`
 
-  > redis:4.0
+    > docker run -p 当前主机端口:容器启动端口 容器名
 
-  > dockersamples/visualizer:stable
+4. 关闭容器 `docker container stop <当前运行容器的ID>`
 
-2. 目录：
+    > 容器列表：`docker container ps -a`
 
-  > /data/java 存放java相关文件
+5. 启动容器 `docker container start <当前运行容器的ID>`
 
-  > /data/mongo 存放mongo数据
-
-  > /data/redis 存放redis数据
-
-3. 网络：
-
-  > java:9000
-
-  > visualizer:9001
-
-  > mongo:3717
-
-  > redis:7000
-
-4. 内存：
-
-  > java:256m
-
-  > mongo:500m
-
-  > redis:100m
+## 提示: docker --help
